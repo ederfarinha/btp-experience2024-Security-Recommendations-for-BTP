@@ -27,7 +27,7 @@ Seguindo o blog para configurar o **teste do SAP Cloud Identity Services (SCI)**
 
     Navegue no BTP Cockpit para **Trial HOME -> sua subconta inicial (por exemplo, Trial Subaccount 1 ) -> Security -> Trust Configuration**
 
-    Verifique se o Provedor de Identidade Personalizado para aplicativos está configurado. Caso contrário, volte aos preparativos e siga o blog [SAP Cloud Identity Services oferecidos como versão de teste](https://blogs.sap.com/2023/04/13/sap-cloud-identity-services-offered-as- versão de teste/) sobre como configurá-lo.
+    Verifique se o Provedor de Identidade Personalizado para aplicativos está configurado. Caso contrário, volte aos preparativos e siga o blog [SAP Cloud Identity Services oferecidos como versão de teste](https://community.sap.com/t5/technology-blogs-by-sap/sap-cloud-identity-services-offered-as-trial-version/ba-p/13552272) sobre como configurá-lo.
 
 <br>![](/exercises/ex0/images/Subaccoount1_TrustConfiguration.png)
 
