@@ -1,55 +1,55 @@
-# Getting started
+# Introdução
 
-After you did activate your Trial Account for SAP BTP with access to the BTP Cockpit and the SAP Cloud Identity (SCI) Trial with access to the SAP Cloud Identity administrative console you are set for the next steps.
+Depois de ativar sua conta de avaliação do SAP BTP com acesso ao BTP Cockpit e a avaliação do SAP Cloud Identity (SCI) com acesso ao console administrativo do SAP Cloud Identity, você estará pronto para as próximas etapas.
 
-We can expect that you did create a **Trial subaccount** in your SAP BTP Trial Account cockpit.
+Esperamos que você tenha criado uma **subconta de avaliação** no cockpit da sua conta de avaliação SAP BTP.
 
-We also expect that you did enable the **Cloud Foundry Environment**.
+Também esperamos que você tenha ativado o **Ambiente Cloud Foundry**.
 
-Finally you have installed on your mobile device a time-based authentication application (such as SAP Authenticator, Google Authenticator or Microsoft Authenticator).
+Finalmente você instalou em seu dispositivo móvel um aplicativo de autenticação baseado em tempo (como SAP Authenticator, Google Authenticator ou Microsoft Authenticator).
 
-Following the blog to setup the **SAP Cloud Identity Services (SCI) Trial** you did already establish the Trust configration in your BTP Trial Subaccount, which adds the Trial Identity Provider for applications to enable users from your Trial Identity Provider to log on to applications consumed in this subaccount.
+Seguindo o blog para configurar o **teste do SAP Cloud Identity Services (SCI)** você já estabeleceu a configuração Trust em sua subconta de teste BTP, que adiciona o Provedor de identidade de teste para aplicativos para permitir que os usuários do seu Provedor de identidade de teste façam logon para aplicativos consumidos nesta subconta.
 
-## Result of the preparation
+## Resultado da preparação
 
-1. Logon to your personal SAP BTP Trial account cockpit with the user you used to activate the Account. Go to the [**SAP BTP Trial page**](https://account.hanatrial.ondemand.com/trial/#/home/trial) and click **Log On**.
+1. Faça logon no cockpit pessoal da sua conta de avaliação SAP BTP com o usuário que você usou para ativar a conta. Acesse a [**página de avaliação do SAP BTP**](https://account.hanatrial.ondemand.com/trial/#/home/trial) e clique em **Log On**.
 
-2. You will see one main button on the welcome screen of the SAP BTP Cockpit. Click on **Go To Your Trial Account** to navigate to your global account.  
-   **Bookmark** the link for fast and quick access to the **BTP cockpit**.
+2. Você verá um botão principal na tela de boas-vindas do SAP BTP Cockpit. Clique em **Ir para sua conta de teste** para navegar até sua conta global.
+    **Marque** o link para acesso rápido e rápido ao **cockpit BTP**.
 
-3. Navigate to the subaccount and check if the Cloud Foundry runtime is enabled. If it is **not** enabled, click on **Enable Cloud Foundry**. This may take some seconds. This page displays the current state of the subaccount. You can manage your subscriptions and jump into the different runtime environments. It also shows you fundamental information of the Cloud Foundry environment, such as the API endpoint and the available spaces.
+3. Navegue até a subconta e verifique se o tempo de execução do Cloud Foundry está ativado. Se **não** estiver ativado, clique em **Ativar Cloud Foundry**. Isso pode levar alguns segundos. Esta página exibe o estado atual da subconta. Você pode gerenciar suas assinaturas e acessar diferentes ambientes de execução. Também mostra informações fundamentais do ambiente Cloud Foundry, como o endpoint da API e os espaços disponíveis.
 
 <br>![](/exercises/ex0/images/audit0.png)
 
 <br>![](/exercises/ex0/images/Subaccount%20Overview.png)
 
-4. Check the Trust Configuration for application users
+4. Verifique a configuração de confiança para usuários do aplicativo
 
-   Navigate in the  BTP Cockpit to **Trial HOME -> your initial subaccount (e.g. Trial Subaccount 1 ) -> Security -> Trust Configuration**
+    Navegue no BTP Cockpit para **Trial HOME -> sua subconta inicial (por exemplo, Trial Subaccount 1 ) -> Security -> Trust Configuration**
 
-   Check if the Custom Identity Provider for applications is configured. If not go back to the preparations and follow the blog [SAP Cloud Identity Services offered as Trial Version](https://blogs.sap.com/2023/04/13/sap-cloud-identity-services-offered-as-trial-version/) on how to configure it.
+    Verifique se o Provedor de Identidade Personalizado para aplicativos está configurado. Caso contrário, volte aos preparativos e siga o blog [SAP Cloud Identity Services oferecidos como versão de teste](https://blogs.sap.com/2023/04/13/sap-cloud-identity-services-offered-as- versão de teste/) sobre como configurá-lo.
 
 <br>![](/exercises/ex0/images/Subaccoount1_TrustConfiguration.png)
 
-5. Logon to your personal Identity Provider - SCI Cockpit (SCI - SAP Cloud Identity service).
+5. Faça logon em seu provedor de identidade pessoal - SCI Cockpit (SCI - serviço SAP Cloud Identity).
 
-   Navigate in your Subaccoount to **Instance and Subscriptions**. Click on the tile next to the subscribt application **Cloud Identity Services** which says **Go to Application** when you hover over it. A new window opens with your SAP Cloud Identity Services Trial Account Cockpit. **Bookmark** the link for fast and quick access to the **SCI cockpit**.
+    Navegue em sua subconta até **Instâncias e assinaturas**. Clique no bloco ao lado do aplicativo inscrito **Cloud Identity Services** que diz **Ir para o aplicativo** quando você passa o mouse sobre ele. Uma nova janela é aberta com o Cockpit da conta de avaliação do SAP Cloud Identity Services. **Marque** o link para acesso rápido e rápido ao **SCI cockpit**.
 
-    <br>![](/exercises/ex0/images/SubaccountInstanceandSubscriptions.png)
+     <br>![](/exercises/ex0/images/SubaccountInstanceandSubscriptions.png)
    
-     <br>![](/exercises/ex0/images/SCICockpit.png)
+      <br>![](/exercises/ex0/images/SCICockpit.png)
 
-7. In the **SCI administration console -> Applications & Resources -> Applications** you will see the trust configuration that was established by your BTP trial account. It is called **XSUAA_trial**.
+7. No **console de administração SCI -> Aplicativos e Recursos -> Aplicativos** você verá a configuração de confiança que foi estabelecida pela sua conta de teste BTP. É denominado **XSUAA_trial**.
 
 <br>![](/exercises/ex0/images/SCI_XSUAA_trial.png")
 
-   Applications you deploy in your BTP subaccount can now delegate authentication to the SCI tenant you just created. And in the **SCI admin console** you may configure the various options for authentication and multi-factor authentication.
+    Os aplicativos que você implanta em sua subconta BTP agora podem delegar a autenticação ao locatário SCI que você acabou de criar. E no **console de administração do SCI** você pode configurar as diversas opções de autenticação e autenticação multifator.
 
- 8.  Logout at the **SCI administrative console**.
+  8. Efetue logout no **console administrativo do SCI**.
 
-<br><img src="/exercises/ex1/images/SCI_logout.png" width="70%"> 
+<br><img src="/exercises/ex1/images/SCI_logout.png" width="70%">
 
-## Summary
+## Resumo
 
-Now that you have checked all the prerequisites and have access to both administrative cockpits, SAP BTP Cockpit and the SCI Cockpit,  
-Continue to - [Exercise 1 - Enable Multi-Factor Authentication for applications](../ex1/README.md)
+Agora que você verificou todos os pré-requisitos e tem acesso aos dois cockpits administrativos, SAP BTP Cockpit e SCI Cockpit,
+Continue para - [Exercício 1 - Habilitar autenticação multifator para aplicativos](../ex1/README.md)
