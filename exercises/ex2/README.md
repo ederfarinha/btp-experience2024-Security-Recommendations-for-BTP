@@ -1,180 +1,181 @@
-# Exercise 2 - Security Recommendations regarding user access and authentication
+# Exercício 2 - Recomendações de segurança em relação ao acesso e autenticação de usuários
 
-In this exercise you will learn about further security recommendations that help protect your accounts from risks related to access and authentication
+Neste exercício você aprenderá mais recomendações de segurança que ajudam a proteger suas contas contra riscos relacionados ao acesso e autenticação
 
-# Relevant Security Recommendations
-- BTP-IAS-0002
-- BTP-IAS-0003
-- BTP-IAS-0005
-- BTP-IAS-0017
+# Recomendações de segurança relevantes
+-BTP-IAS-0002
+-BTP-IAS-0003
+-BTP-IAS-0005
+-BTP-IAS-0017
 
 
-## Exercise 2.1 Manage obsolete administrators
+## Exercício 2.1 Gerenciar administradores obsoletos
 
-It makes sense to review on a regular basis whether the users actually need access to adminsitrative tasks and cockpits. After all, an abandoned account with high privileges could become an attack target. We have two administrative cockpits we deal with in this excercise. One is the **SAP BTP cockpit** and the other one is the **administrative console for Cloud Identity Services**. In the Trial BTP cockpit we don´t have access to the global account user management and security functionalities. In the administrative console for Cloud Identity Services we have access. In this excercise we will check for the users in the administrative console for Cloud Identity Services. SAP Cloud Identity services play a critical role in the access to SAP cloud applications. Because the central role of the services, it's required to reduce the number of administrators with full access. SAP Cloud Identity services permissions are based on the internal user store and its permission concept.
+Faz sentido revisar regularmente se os usuários realmente precisam de acesso a tarefas administrativas e cockpits. Afinal, uma conta abandonada com altos privilégios pode se tornar alvo de ataque. Temos dois cockpits administrativos com os quais tratamos neste exercício. Um é o **cockpit SAP BTP** e o outro é o **console administrativo para Cloud Identity Services**. No cockpit do Trial BTP não temos acesso às funcionalidades globais de gerenciamento de usuários e segurança da conta. No console administrativo do Cloud Identity Services temos acesso. Neste exercício, verificaremos os usuários no console administrativo do Cloud Identity Services. Os serviços SAP Cloud Identity desempenham um papel crítico no acesso a aplicativos em nuvem SAP. Devido ao papel central dos serviços, é necessário reduzir o número de administradores com acesso total. As permissões dos serviços SAP Cloud Identity são baseadas no armazenamento interno do usuário e em seu conceito de permissão.
 
-1. Open the **administrative console for Cloud Identity Services** from your bookmarks or like describt in the fist excercise. 
+1. Abra o **console administrativo do Cloud Identity Services** em seus favoritos ou como descrito no primeiro exercício.
 
 <br><img src="/exercises/ex2/images/SCICockpit.png" width="70%">
 
-2. First we will add a new test user. Navigate to **User & Authorizations -> User Management**
-3. Click on the **+ Add**-button
+2. Primeiro adicionaremos um novo usuário de teste. Navegue até **Usuários e autorizações -> Gerenciamento de usuários**
+3. Clique no botão **+ Adicionar**
 
 <br><img src="/exercises/ex2/images/ex200user1.png" width="70%">
 
-4. A pop-Up window will allow to enter the relevant test user information. You are free to choose the name and email adress. Set the status to active. Click on the **+ Add**-button.
+4. Uma janela pop-up permitirá inserir as informações relevantes do usuário de teste. Você é livre para escolher o nome e o endereço de e-mail. Defina o status como ativo. Clique no botão **+ Adicionar**.
 
 <br><img src="/exercises/ex2/images/ex200user2.png" width="70%">
 
-5. Now we add the newly created user to the Administrators. Choose the menu item **Users & Authorizations --> Administrators**.
+5. Agora adicionamos o usuário recém-criado aos Administradores. Escolha o item de menu **Usuários e autorizações --> Administradores**.
 
 <br><img src="/exercises/ex2/images/ex22.png" width="70%">
 
-6. Click on **Add -> User**
+6. Clique em **Adicionar -> Usuário**
 
 <br><img src="/exercises/ex2/images/ex20add.png" width="70%">
 
-7. Add the **Identifier** information (Email adress) of the new test user in the Add Administrator window and click on the **Save**-button.
+7. Adicione as informações do **Identificador** (endereço de e-mail) do novo usuário de teste na janela Adicionar administrador e clique no botão **Salvar**.
 
 <br><img src="/exercises/ex2/images/ex200user3.png" width="70%">
    
-7. Now we can check the User and his authorizations. The assignment of the following authorizations is critical.
-You will manage them ideally as part of your identity lifecycle process.
-- Manage Corporate Identity Providers
-- Manage Tenant Configuration
-- Manage Users
+7. Agora podemos verificar o Usuário e suas autorizações. A atribuição das seguintes autorizações é crítica.
+Idealmente, você os gerenciará como parte do processo do ciclo de vida da identidade.
+- Gerenciar provedores de identidade corporativa
+- Gerenciar configuração do locatário
+- Gerenciar usuários
   
 <br><img src="/exercises/ex2/images/ex200user4.png" width="70%">
 
-8. Remove the authorizations, which are not needed anymore. If you remove all of them the user will no longer be an administrator, and the name will be removed from the list on the left. We will do this now. Uncheck all Radio-buttons. Then click on the **Save**-button.
+8. Remova as autorizações que não são mais necessárias. Se você remover todos eles, o usuário não será mais administrador e o nome será removido da lista à esquerda. Faremos isso agora. Desmarque todos os botões de opção. Em seguida, clique no botão **Salvar**.
 
 <br><img src="/exercises/ex2/images/ex200user5.png" width="70%">
 
-9. Now you have to confirm your changes. Click on the **Okay**-button. 
+9. Agora você precisa confirmar suas alterações. Clique no botão **Ok**.
 
 <br><img src="/exercises/ex2/images/ex200user6.png" width="70%">
 
-The only administrator left will be your trial account user.
-You cannot remove the authorizations of this user completely, as he is the only one left. 
-For this reason the authorization
-- Manage Tenant Configuration
-- Manage tenant configuration and authorization assignment to users 
+O único administrador restante será o usuário da sua conta de teste.
+Você não pode remover completamente as autorizações deste usuário, pois ele é o único que resta.
+Por esta razão a autorização
+- Gerenciar configuração do locatário
+- Gerenciar configuração de locatário e atribuição de autorização aos usuários
 
-is greyed out. 
+está esmaecido.
 
 <br><img src="/exercises/ex2/images/ex2_MTC.png" width="70%">
 
 
-## Exercise 2.2 Defining a custom password policy
+## Exercício 2.2 Definindo uma política de senha personalizada
 
-By default, SAP Cloud Identity services come with 2 password policies, Standard and Enterprise. In this exercise you will learn how to define your own password policy, based on your company's requirements.
+Por padrão, os serviços SAP Cloud Identity vêm com 2 políticas de senha, Standard e Enterprise. Neste exercício você aprenderá como definir sua própria política de senhas, com base nos requisitos da sua empresa.
 
-1. Open the **administration console for Cloud Identity Services**. 
+1. Abra o **console de administração do Cloud Identity Services**.
 
 <br><img src="/exercises/ex2/images/SCICockpit.png" width="70%">
 
-2. Choose the menu item **Applications & Resources --> Password Policies**
+2. Escolha o item de menu **Aplicativos e Recursos --> Políticas de Senha**
 
 <br><img src="/exercises/ex2/images/ex2pp1.png" width="70%">
 
-3. Click on the button **Add Custom Policy**. 
+3. Clique no botão **Adicionar Política Personalizada**.
 
 <br><img src="/exercises/ex2/images/ex2pp2.png" width="70%">
 
-4. The dialog **Custom Password Policy** is displayed
+4. A caixa de diálogo **Política de senha personalizada** é exibida
 
 <br><img src="/exercises/ex2/images/ex2pp3.png" width="70%">
 
-5. Set the policy strength to **3**. This implies that this policy has a higher priority than the existing policies "Standard" and "Enterprise". This becomes relevant when a user accesses applications with different password policy requirements. A password policy with strength 3 will also be accepted by applications that require strength 1 or 2.
+5. Defina a força da política como **3**. Isto implica que esta política tem uma prioridade mais elevada do que as políticas existentes “Standard” e “Enterprise”. Isso se torna relevante quando um usuário acessa aplicativos com diferentes requisitos de política de senha. Uma política de senha com força 3 também será aceita por aplicativos que exigem força 1 ou 2.
 
-💡 Identity Authentication service does not measure the strength of the policy that you define. It is up to you do decide, which properties are required for a password to be considered strong
+💡 O serviço de autenticação de identidade não mede a força da política que você define. Cabe a você decidir quais propriedades são necessárias para que uma senha seja considerada forte
 
-6. Decide on the "Password Behavior". Should the user be able to reset an expired password with the old one, or should the user have to perform the password reset process?
+6. Decida o "Comportamento da senha". O usuário deve ser capaz de redefinir uma senha expirada com a antiga ou deve executar o processo de redefinição de senha?
 
-7. Set the "Required character groups count" to 3. SAP Cloud Identity services supports 4 types of character groups, uppercase letters, lowercase letters, numbers, and symbols. With this setting you specific how many different groups need to be part of the password. 
+7. Defina a "Contagem de grupos de caracteres necessários" como 3. Os serviços SAP Cloud Identity suportam 4 tipos de grupos de caracteres, letras maiúsculas, letras minúsculas, números e símbolos. Com esta configuração você especifica quantos grupos diferentes precisam fazer parte da senha.
 
-8. Fill out the remaining fields of the "Custom Password Policy" dialog and click on the **"Add"**-button. Your new password policy is added to the top of the list as it has the highest strength.
+8. Preencha os campos restantes da caixa de diálogo "Política de senha personalizada" e clique no botão **"Adicionar"**. Sua nova política de senha é adicionada ao topo da lista porque tem a maior resistência.
 
 <br><img src="/exercises/ex2/images/ex2pp4.png" width="70%">
 
-Now you know how to create a custom password policy that you can use for additional protection of your applications. We now want to add the pasword policy to an application. 
+Agora você sabe como criar uma política de senha personalizada que pode ser usada para proteção adicional de seus aplicativos. Agora queremos adicionar a política de senha a um aplicativo.
 
-9. Navigate to **Applications & Resources -> Applications**. Select one application on the left and choose on the right side **Authentication & Access -> Policies**.
+9. Navegue até **Aplicativos e Recursos -> Aplicativos**. Selecione um aplicativo à esquerda e escolha no lado direito **Autenticação e Acesso -> Políticas**.
 
 <br><img src="/exercises/ex2/images/addpp1.png" width="70%">
 
-10. Choose **Password Policy**
+10. Escolha **Política de senha**
 
 <br><img src="/exercises/ex2/images/addpp2.png" width="70%">
 
-11. Select your custom password policy. Click on the **Save**-button.
+11. Selecione sua política de senha personalizada. Clique no botão **Salvar**.
 
-Now the new password policy is active for the application. It sets the rules you defined for the password length and content as well as how users can update and unlock passwords. 
+Agora a nova política de senha está ativa para o aplicativo. Ele define as regras que você definiu para o comprimento e conteúdo da senha, bem como como os usuários podem atualizar e desbloquear senhas. 
 
-## Exercise 2.3 Keep public access to applications by self-registration disabled
 
-For business-to-consumer (public) scenarios, self-registration may be required. By default, self-registration is disabled (value = internal) and can be configured per application.
-Corporate identity lifecycle processes make self-registration undesirable in most business-to-employee (B2E) and business-to-business (B2B) scenarios. We recommend to keep self-registration disabled (value = internal). Actively manage use cases that require the function.
+## Exercício 2.3 Manter o acesso público aos aplicativos por meio de autorregistro desabilitado
 
-Procedure
+Para cenários de empresa para consumidor (público), o autorregistro pode ser necessário. Por padrão, o autorregistro está desabilitado (valor = interno) e pode ser configurado por aplicação.
+Os processos do ciclo de vida da identidade corporativa tornam o autorregistro indesejável na maioria dos cenários business-to-employee (B2E) e business-to-business (B2B). Recomendamos manter o autorregistro desabilitado (valor = interno). Gerencie ativamente os casos de uso que exigem a função.
 
-1. Open the **administration console for Cloud Identity Services**.
+Procedimento
+
+1. Abra o **console de administração do Cloud Identity Services**.
 
 <br><img src="/exercises/ex2/images/SCICockpit.png" width="70%">
 
-2. Under **Applications & Resources**, choose the **Applications** tile.
+2. Em **Aplicativos e Recursos**, escolha o bloco **Aplicativos**.
 
 <br><img src="/exercises/ex2/images/ex2selfreg1.png" width="70%">
 
-3. Choose the **application** that you want to edit.
-4. Choose the **Authentication and Access** tab.
-5. Under **Authentication**, choose **User Application Access**.
+3. Escolha o **aplicativo** que deseja editar.
+4. Escolha a guia **Autenticação e acesso**.
+5. Em **Autenticação**, escolha **Acesso ao Aplicativo do Usuário**.
 
 <br><img src="/exercises/ex2/images/ex2selfreg2.png" width="70%">
 
-6. Set the radio button for the users you want to allow to log on:
-- Public
-- Internal
-- Private
+6. Defina o botão de opção para os usuários que você deseja permitir o logon:
+- Público
+- Interno
+- Privado
 
 <br><img src="/exercises/ex2/images/ex2selfreg3.png" width="70%">
   
-7. Save your selection. The default setting is already **Internal**. Because of that you don´t need to change it.
-8. If the application is updated, the system displays the message "Application - *name of application*" updated.
+7. Salve sua seleção. A configuração padrão já é **Interna**. Por isso você não precisa alterá-lo.
+8. Caso o aplicativo seja atualizado, o sistema apresenta a mensagem “Aplicativo - *nome do aplicativo*” atualizado.
 
-## Exercise 2.4 Keep Social Sign-On disabled
+## Exercício 2.4 Manter o Social Sign-On desativado
 
-For business-to-consumer (public) scenarios, Social Sign-On may be required. If activated users are allowed to log on with their Apple, Google, Facebook, Twitter, or LinkedIn accounts. By default, Social Sign-On is disabled, set to Off, and can be configured per application.
-Corporate identity lifecycle processes make social sign-on undesirable in most business-to-employee (B2E) and business-to-business (B2B) scenarios.
+Para cenários de empresa para consumidor (público), o Social Sign-On pode ser necessário. Se ativado, os usuários poderão fazer logon com suas contas Apple, Google, Facebook, Twitter ou LinkedIn. Por padrão, o Social Sign-On está desabilitado, definido como Desativado e pode ser configurado por aplicativo.
+Os processos do ciclo de vida da identidade corporativa tornam o login social indesejável na maioria dos cenários business-to-employee (B2E) e business-to-business (B2B).
 
-Procedure
+Procedimento
 
-1. Sign in to the **administration console for SAP Cloud Identity Services**.
+1. Faça login no **console de administração do SAP Cloud Identity Services**.
 
 <br><img src="/exercises/ex2/images/SCICockpit.png" width="70%">
 
-2. Under **Applications & Resources**, choose the **Applications** tile.
+2. Em **Aplicativos e Recursos**, escolha o bloco **Aplicativos**.
 
 <br><img src="/exercises/ex2/images/ex2selfreg1.png" width="70%">
 
-3. Choose the **application** that you want to edit.
-4. Choose the **Authentication and Access** tab.
-5. Under **Authentication**, enable or disable **Social Sign-On** using the radio-button. Per default it should be disabled. Because of that you don´t need to change it.
+3. Escolha o **aplicativo** que deseja editar.
+4. Escolha a guia **Autenticação e Acesso**.
+5. Em **Autenticação**, ative ou desative **Social Sign-On** usando o botão de opção. Por padrão, ele deve estar desabilitado. Por isso você não precisa alterá-lo.
 
 <br><img src="/exercises/ex2/images/ex2sso1.png" width="70%">
 
-6. Once the application has been updated, the system displays the message "Application - *name of application*" updated.
+6. Após a atualização do aplicativo, o sistema apresenta a mensagem “Aplicativo - *nome do aplicativo*” atualizado.
 
-With Social Sign-On users can log on to the application via one of the social providers. They can see this option on the logon page. Which social identity providers logos appear on the logon page of the application depends on the configurations you have made.
+Com o Social Sign-On, os usuários podem fazer logon no aplicativo por meio de um dos provedores sociais. Eles podem ver essa opção na página de login. Quais logotipos de provedores de identidade social aparecem na página de logon do aplicativo depende das configurações que você fez.
 
-7. Logout at the **SCI administrative console**.
+7. Efetue logout no **console administrativo do SCI**.
 
 <br><img src="/exercises/ex1/images/SCI_logout.png" width="70%">
 
-## Summary
+## Resumo
 
-In this exercise you have learned how to identity potentially not needed user accounts. In addition, you have seen how you can define custom password policies, and how to check for several settings related to the authentication of users.
+Neste exercício você aprendeu como identificar contas de usuário potencialmente desnecessárias. Além disso, você viu como definir políticas de senha personalizadas e como verificar diversas configurações relacionadas à autenticação de usuários.
 
 
 
-Continue to - [Exercise 3 - Security Recommendations regarding the Audit Log ](../ex3/README.md)
+Continue para - [Exercício 3 - Recomendações de segurança em relação ao log de auditoria](../ex3/README.md)
