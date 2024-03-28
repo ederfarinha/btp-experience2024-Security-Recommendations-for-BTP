@@ -1,134 +1,130 @@
-# Exercise 3 - Security Recommendations regarding the Audit Log
+# Exercício 3 - Recomendações de Segurança em relação ao Log de Auditoria
 
-In this exercise you will learn about security recommendations that help protect your accounts from risks by using the audit log.
-The SAP Audit Log service is a platform service that stores all the audit logs written on your behalf by other platform services that you use. It allows you to retrieve the audit logs for your subaccount via the [audit log retrieval API](https://help.sap.com/docs/btp/sap-business-technology-platform/audit-log-retrieval-api-usage-for-subaccounts-in-cloud-foundry-environment) or view them using the SAP Audit Log Viewer service. The default retention time is 90 days, after which the audit log data is deleted.
-Because of that, we recommend downloading audit logs on a regular basis and save them, ideally in an existing and central audit log system or Security Information and Event Management (SIEM) system of your choice. This can be done via the audit log retrieval API or in the SAP Audit Log Viewer service. 
+Neste exercício você aprenderá sobre recomendações de segurança que ajudam a proteger suas contas contra riscos usando o log de auditoria.
+O serviço SAP Audit Log é um serviço de plataforma que armazena todos os logs de auditoria gravados em seu nome por outros serviços de plataforma que você usa. Ele permite que você recupere os logs de auditoria da sua subconta por meio da [API de recuperação de log de auditoria](https://help.sap.com/docs/btp/sap-business-technology-platform/audit-log-retrieval-api- uso para subcontas no ambiente cloud-foundry) ou visualizá-los usando o serviço SAP Audit Log Viewer. O tempo de retenção padrão é de 90 dias, após os quais os dados do log de auditoria são excluídos.
+Por isso, recomendamos baixar logs de auditoria regularmente e salvá-los, de preferência em um sistema de log de auditoria central e existente ou em um sistema de gerenciamento de eventos e informações de segurança (SIEM) de sua escolha. Isso pode ser feito por meio da API de recuperação de log de auditoria ou no serviço SAP Audit Log Viewer.
 
-# Relevant Security Recommendations
-- BTP-AUD-0001
+# Recomendações de segurança relevantes
+-BTP-AUD-0001
 
 
-## Exercise 3.1 Subscribe to the SAP Audit Log Viewer service
+## Exercício 3.1 Assine o serviço SAP Audit Log Viewer
 
-In this excercise you will subscribe to the **Audit Log Viewer Service**
+Neste exercício, você assinará o **Serviço Visualizador de Log de Auditoria**
 
-1. Open the **SAP BTP Cockpit**.
+1. Abra o **Cockpit SAP BTP**.
 
-  <br><img src="/exercises/ex3/images/audit0.png" width="70%">
+   <br><img src="/exercises/ex3/images/audit0.png" width="70%">
 
-2. Navigate to your **trail subaccount** by clicking on the tile. Go to **Service Marketplace**.
+2. Navegue até sua **subconta de trilha** clicando no bloco. Acesse **Mercado de Serviços**.
 
- <br><img src="/exercises/ex3/images/audit02.png" width="70%">
+  <br><img src="/exercises/ex3/images/audit02.png" width="70%">
 
-3. Enter **audit** in the search field. Select the **Audit Log Viewer Service** and click on it.
+3. Insira **auditoria** no campo de pesquisa. Selecione **Serviço Visualizador de Log de Auditoria** e clique nele.
 
 <br><img src="/exercises/ex3/images/audit1.png" width="70%">
   
-4. Now subscribe to it. This is done by using the **create**-button in the uper right corner. The **Audit Log Mangement Service** can later be used to configure the retention period and to retrieve the logfiles for your SIEM system. We don´t need it in this excercise.
+4. Agora assine. Isso é feito usando o botão **criar** no canto superior direito. O **Audit Log Mangement Service** pode ser usado posteriormente para configurar o período de retenção e recuperar os arquivos de log do seu sistema SIEM. Não precisamos disso neste exercício.
 
 <br><img src="/exercises/ex3/images/audit2.png" width="70%">
 
-5. A windows pops up. Click on the **create**-button.
+5. Uma janela é exibida. Clique no botão **criar**.
 
 <br><img src="/exercises/ex3/images/audit3.png" width="70%">
 
-6. Navigte to **View Subscription**
+6. Navegue até **Ver assinatura**
    
 <br><img src="/exercises/ex3/images/audit4.png" width="70%">
 
-8. Under **Instances and Subscriptions** you can now see the new Application **Audit Log Viewer Service** and the link to the application next to it.
+8. Em **Instâncias e Assinaturas** agora você pode ver o novo aplicativo **Audit Log Viewer Service** e o link para o aplicativo próximo a ele.
    
 <br><img src="/exercises/ex3/images/audit5.png" width="70%">
 
 
+## Exercício 3.2 Configurar o serviço SAP Audit Log Viewer
 
-## Exercise 3.2 Configure the SAP Audit Log Viewer service
+  Neste exercício, você configurará o serviço SAP Audit Log Viewer para ver entradas de log relevantes de auditoria.
 
- In this exercise you will configure the SAP Audit Log Viewer service to see audit relevant log entries.
+1. Abra o **Cockpit SAP BTP**.
 
-1. Open the **SAP BTP Cockpit**. 
+   <br><img src="/exercises/ex3/images/audit0.png" width="70%">
 
-  <br><img src="/exercises/ex3/images/audit0.png" width="70%">
+2. Vá para a **subconta da trilha** clicando no bloco
 
-2. Go to the **trail subaccount** by clicking on the tile
-
-3. Choose the menu item **Security --> Role Collections** and click on the **"+"**-button to create a new role collection
+3. Escolha o item de menu **Segurança --> Coleções de funções** e clique no botão **"+"** para criar uma nova coleção de funções
 
 <br><img src="/exercises/ex3/images/audit6.png" width="70%">
 
-4. In the pop-up window enter the role collection name **Audit Log Viewer**. In the description enter **View the audit relevant logs in the audit log viewer**.
-Click on the **Create**-button.
+4. Na janela pop-up, insira o nome da coleção de funções **Audit Log Viewer**. Na descrição, insira **Ver os logs relevantes de auditoria no visualizador de log de auditoria**.
+Clique no botão **Criar**.
 
 <br><img src="/exercises/ex3/images/audit7.png" width="70%">
 
-5. Now you can see the **Audit Log Viewer** role collection together with the other role collections. Click on **">"** on the right side of the newly created role collection to open the details. 
+5. Agora você pode ver a coleção de funções **Visualizador de log de auditoria** junto com as outras coleções de funções. Clique em **">"** no lado direito da coleção de funções recém-criada para abrir os detalhes.
 
-6. In the extended window you can assign roles and users to the role collection. Start assigning the two roles of the audit log viewer service called **Auditlog_Auditor** to the role collection.
-To do so click on the **Edit**-button.
+6. Na janela estendida você pode atribuir funções e usuários à coleção de funções. Comece a atribuir as duas funções do serviço visualizador de log de auditoria chamado **Auditlog_Auditor** à coleção de funções.
+Para fazer isso, clique no botão **Editar**.
 
 <br><img src="/exercises/ex3/images/audit8.png" width="70%">
 
-8. In the edit mode search under role name for the two roles called **Auditlog_Auditor**.
+8. No modo de edição, pesquise no nome da função as duas funções chamadas **Auditlog_Auditor**.
 
 <br><img src="/exercises/ex3/images/audit9.png" width="70%">
 
-9. Mark the two roles called **Auditlog_Auditor** and click the "Add"-button. 
+9. Marque as duas funções chamadas **Auditlog_Auditor** e clique no botão "Adicionar".
 
 <br><img src="/exercises/ex3/images/audit10.png" width="70%">
 
-11. Go to the **Users** section and enter the email address of your **SAP Cloud Identity Service user**. Enter it in the **ID** field and select the entry from the list.
+11. Vá para a seção **Usuários** e insira o endereço de e-mail do seu **usuário do SAP Cloud Identity Service**. Insira-o no campo **ID** e selecione a entrada na lista.
 
 <br><img src="/exercises/ex3/images/audit12.png" width="70%">
  
-12. Click the **Save** button to save your changes.
+12. Clique no botão **Salvar** para salvar suas alterações.
 
-<br><img src="/exercises/ex3/images/audit13.png" width="70%"> 
+<br><img src="/exercises/ex3/images/audit13.png" width="70%">
  
-13. The result will be that the user with the assigned authorizations can use the **Audit Log Viewer service**. You need to be logged into the cockpit with this user to be able to see the Viewer in the next step.
+13. O resultado será que o usuário com as autorizações atribuídas poderá usar o **serviço Audit Log Viewer**. Você precisa estar logado no cockpit com este usuário para poder ver o Viewer na próxima etapa.
 
+
+## Exercício 3.3 Verifique os logs de auditoria e baixe as entradas do log de auditoria por meio do serviço SAP Audit Log Viewer
+
+Você pode fazer download dos logs de auditoria por meio da API de recuperação de log de auditoria para importá-los para seu sistema de gerenciamento de informações e eventos de segurança (SIEM) ou pode baixá-los por meio da interface do usuário do Viewer para armazená-los como backup em seu sistema de arquivos.
+Agora você aprende como baixá-los por meio da interface do usuário.
+
+1. Abra o **Cockpit SAP BTP**.
+
+   <br><img src="/exercises/ex3/images/audit0.png" width="70%">
+
+2. Navegue até **Serviços > Instâncias e Assinaturas**. Em Assinaturas, você verá o **serviço Audit Log Viewer**. Ao lado do campo de texto há um link para a interface do usuário. Clique nisso.
  
+   <br><img src="/exercises/ex3/images/audit14.png" width="70%">
 
+4. Uma página de login aparecerá. Selecione seu locatário **Teste SAP Cloud Identity Service**.
 
-## Exercise 3.3 Check the audit logs and download audit log entries via the SAP Audit Log Viewer service
+5. Um pop-up solicitará **E-mail** e **Senha**. Insira o e-mail do seu usuário SAP Cloud Identity e sua senha.
 
-You can download the audit logs via the audit log retrieval API to import them into your Security Information and Event Management (SIEM) system or you can download them via the Viewer User Interface to store them as backup on your file system.
-Now you learn how to download them via the User Interface.
+    <br><img src="/exercises/ex1/images/logon_XSUAA_trial.png" width="50%">
 
-1. Open the **SAP BTP Cockpit**. 
+6. Como habilitamos no primeiro exercício a autenticação multifator (MFA) usando senha única baseada em tempo (TOTP) para aplicativos em BTP, a janela **Autenticação de dois fatores** será exibida. Gere a senha no seu dispositivo móvel e insira-a. Depois de inserir a senha baseada em tempo gerada pelo seu dispositivo móvel, o aplicativo **Audit Log Viewer** será aberto.
 
-  <br><img src="/exercises/ex3/images/audit0.png" width="70%">
+   <br><img src="/exercises/ex1/images/MFASAPBUILDAPPSPasscode.png" width="70%">
 
-2. Navigate to **Services > Instances and Subscriptions**. Under Subscriptions you will see the **Audit Log Viewer service**. Next to the text field there is a link to the user interface. Click on it.
- 
-  <br><img src="/exercises/ex3/images/audit14.png" width="70%">
+3. Na **IU do Visualizador de log de auditoria** recém-aberta, você pode aceitar o período padrão ou selecionar um período específico para ver as entradas mais recentes do log de auditoria. No lado direito existe um botão para recuperar os logs após a seleção do prazo.
 
-4. A logon page will appear. Select your **Trial SAP Cloud Identity Service** tenant.
+    <br><img src="/exercises/ex3/images/audit17.png" width="70%">
 
-5. A Pop-Up will ask for **Email** and **Password**. Enter the Email of your SAP Cloud Identity User and his Password.
+4. Agora você pode ver as entradas de log das alterações relevantes da auditoria específica, que foram realizadas recentemente.
 
-   <br><img src="/exercises/ex1/images/logon_XSUAA_trial.png" width="50%"> 
+    <br><img src="/exercises/ex3/images/audit18.png" width="70%">
 
-6. As we enabled in the first excercise Multi-Factor Authentication (MFA) using Time-based one-time password (TOTP) for Applications on BTP,  the **Two-Factor Authentication** window will pop-up. Generate the passcode on your mobile device and enter it. After entering the time-based passcode generated by your mobile device,  the **Audit Log Viewer**-application will open.
+5. O período de retenção dos logs no ambiente Cloud Foundry é de 90 dias. Portanto, é recomendável fazer backup dos arquivos de log de auditoria ou importá-los por meio da API de recuperação de log de auditoria para um sistema SIEM. Você pode baixar os arquivos da interface do usuário. Para fazer isso, clique no botão de download no meio do título.
 
-  <br><img src="/exercises/ex1/images/MFASAPBUILDAPPSPasscode.png" width="70%">
+    <br><img src="/exercises/ex3/images/audit19.png" width="70%">
 
-3. In the newly opened **Audit Log Viewer UI** you can accept the default timeframe or select a specific one to see the latest audit log entries. On the right side there is button to retrieve the logs after the selection of the timeframe.
+6. Na janela pop-up, selecione um local em seu laptop para salvar o arquivo **viewLogs.json**. Clique em **Salvar**.
 
-   <br><img src="/exercises/ex3/images/audit17.png" width="70%">
+Agora você sabe fazer download dos arquivos de log relevantes de auditoria para backup.
 
-4. Now you can see the log entries of the specific audit relevant changes, which have been performed lately. 
+## Resumo
 
-   <br><img src="/exercises/ex3/images/audit18.png" width="70%">
-
-5. The retention period of the logs in the Cloud Foundry environment is 90 days. Therefore, it is recommended to backup the audit log files or import them via the audit log retrieval API into a SIEM system.  You can download the files from the user interface. To do so, click on the download button in the middle of the headline.
-
-   <br><img src="/exercises/ex3/images/audit19.png" width="70%">
-
-6. In the pop-up window, select a place on your laptop to save the **viewLogs.json** file. Click on **Save**.
-
-You now know how to download the audit relevant log files for backup.
-
-## Summary
-
-In this exercise you have configured the **SAP Audit Log Viewer service** to see the audit relevant log entries. In addition, you have seen how to download the audit.log files before the retention period ends.
-
+Neste exercício, você configurou o **serviço SAP Audit Log Viewer** para ver as entradas de log relevantes de auditoria. Além disso, você viu como fazer download dos arquivos audit.log antes do término do período de retenção.
