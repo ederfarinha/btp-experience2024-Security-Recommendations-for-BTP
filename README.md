@@ -2,64 +2,64 @@
 
 #XP264  - Get Hands-On Security Recommendations for Your SAP BTP Environment
 
-## Description
+## Descrição
 
-This repository contains the material for the SAP TechEd 2023 session called XP264  - Get Hands-On Security Recommendations for Your SAP BTP Environment.  
+Este repositório contém o material para a sessão SAP BTP Experience Brazil 2024 chamada XP264 - Get Hands-On Security Recommendations for Your SAP BTP Environment.
 
-## Overview
+## Visão geral
 
-In this session attendees will learn about the security recommendation for BTP services and how to implement them. The [SAP BTP Security Recommendations](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations) are available in the SAP Help Portal in the sections for the SAP Business Technology Platform. It is a list with SAP recommendations for the configuration of SAP BTP services to help customers meet their compliance goals and secure their business.
+Nesta sessão os participantes aprenderão sobre as recomendações de segurança para serviços BTP e como implementá-las. As [Recomendações de segurança SAP BTP](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations) estão disponíveis no SAP Help Portal nas seções para a Plataforma de Tecnologia de Negócios SAP. É uma lista com recomendações SAP para a configuração de serviços SAP BTP para ajudar os clientes a atingir suas metas de conformidade e proteger seus negócios.
 
-## Requirements
+## Requisitos
 
-The requirements to follow the exercises in this repository are active Trial Accounts for SAP BTP and for the SAP Cloud Identity Services. 
+Os requisitos para seguir os exercícios neste repositório são contas de teste ativas para SAP BTP e para os serviços SAP Cloud Identity.
 
-**First you have to get your SAP BTP Trial Account. Follow the instructions:** 
-[Get a Free Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
+**Primeiro você precisa obter sua conta de teste SAP BTP. Siga as instruções:**
+[Obtenha uma conta gratuita na avaliação do SAP BTP](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
 
-**Second task is to activate your SAP Cloud Identity Services Trial. Follow the instructions in this blog:** 
-[SAP Cloud Identity Services offered as Trial Version](https://blogs.sap.com/2023/04/13/sap-cloud-identity-services-offered-as-trial-version/)
+**A segunda tarefa é ativar sua avaliação do SAP Cloud Identity Services. Siga as instruções neste blog:**
+[SAP Cloud Identity Services oferecidos como versão de teste](https://blogs.sap.com/2023/04/13/sap-cloud-identity-services-offered-as-trial-version/)
 
-💡You should have access to your mailbox, which you used while registering for your BTP trial account in order to activate your Cloud Identity Services trial account.
+💡Você deve ter acesso à sua caixa de correio, que usou ao se registrar em sua conta de teste BTP para ativar sua conta de teste do Cloud Identity Services.
 
-**Third task is to install on your mobile device a time-based authentication application (such as SAP Authenticator, Google Authenticator or Microsoft Authenticator).**
+**A terceira tarefa é instalar no seu dispositivo móvel um aplicativo de autenticação baseado em tempo (como SAP Authenticator, Google Authenticator ou Microsoft Authenticator).**
 
 
-Now you are ready to start the excercises.
+Agora você está pronto para iniciar os exercícios.
 
-## Exercises
+## Exercícios
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - Enable Multi-Factor Authentication for applications](exercises/ex1/)
-    - [Exercise 1.1 - Setup SAP Build Apps and enter the application with your trial identity provider user](exercises/ex1#exercise-11---Setup-SAP-Build-Apps-and-enter-the-application-with-your-trial-identity-provider-user)
-    - [Exercise 1.2 - Configure Multi-Factor Authentication to access SAP Build Apps](exercises/ex1#exercise-12---Configure-Multi-Factor-Authentication-to-access-SAP-Build-Apps)
-    - [Exercise 1.3 - Enable MFA for your User](exercises/ex1#exercise-13---Enable-MFA-for-your-User)
+- [Introdução](exercícios/ex0/)
+- [Exercício 1 - Habilitar autenticação multifator para aplicativos](exercícios/ex1/)
+     - [Exercício 1.1 - Configure SAP Build Apps e insira o aplicativo com o usuário do seu provedor de identidade de avaliação](exercícios/ex1#exercise-11---Setup-SAP-Build-Apps-and-enter-the-application-with-your -usuário-provedor-de-identidade de teste)
+     - [Exercício 1.2 - Configurar autenticação multifator para acessar aplicativos SAP Build](exercises/ex1#exercise-12---Configure-Multi-Factor-Authentication-to-access-SAP-Build-Apps)
+     - [Exercício 1.3 - Habilitar MFA para seu usuário](exercícios/ex1#exercise-13---Habilitar MFA para seu usuário)
     
-- [Exercise 2 - Security Recommendations regarding user access and authentication](exercises/ex2/)
-    - [Exercise 2.1 - Manage obsolete administrators](exercises/ex2#exercise-21---Manage-obsolete-administrators)
-    - [Exercise 2.2 - Defining a custom password policy](exercises/ex2#exercise-22---Defining-a-custom-password-policy)
-    - [Exercise 2.3 - Keep public access to applications by self-registration disabled](exercises/ex2#exercise-23---Keep-public-access-to-applications-by-self---registration-disabled)
-    - [Exercise 2.4 - Keep Social Sign-On disabled](exercises/ex2#exercise-24---Keep-Social-Sign---On-disabled)
-- [Exercise 3 -Security Recommendations regarding the Audit Log](exercises/ex3/)
-    - [Exercise 3.1 - Subscribe to the SAP Audit Log Viewer service](exercises/ex3/README.md#Exercise-31---Subscribe-to-the-SAP-Audit-Log-Viewer-service)
-    - [Exercise 3.2 - Configure the SAP Audit Log Viewer service](exercises/ex3/README.md#Exercise-32---configure-the-sap-audit-log-viewer-service)
-    - [Exercise 3.3 - Check the audit logs and download audit log entries via the SAP Audit Log Viewer service](exercises/ex3/README.md#exercise-32---check-the-audit-logs-and-download-audit-log-entries-via-the-sap-audit-log-viewer-service)
+- [Exercício 2 - Recomendações de segurança em relação ao acesso e autenticação de usuários](exercícios/ex2/)
+     - [Exercício 2.1 - Gerenciar administradores obsoletos](exercícios/ex2#exercise-21---Gerenciar administradores obsoletos)
+     - [Exercício 2.2 - Definindo uma política de senha personalizada](exercícios/ex2#exercise-22---Defining-a-custom-password-policy)
+     - [Exercício 2.3 - Manter o acesso público aos aplicativos por auto-registro desabilitado](exercícios/ex2#exercise-23---Keep-public-access-to-applications-by-self---registration-disabled)
+     - [Exercício 2.4 - Manter o Social Sign-On desativado](exercícios/ex2#exercise-24---Keep-Social-Sign---On-disabled)
+- [Exercício 3 - Recomendações de segurança em relação ao log de auditoria](exercícios/ex3/)
+     - [Exercício 3.1 - Assine o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-31---Subscribe-to-the-SAP-Audit-Log-Viewer-service)
+     - [Exercício 3.2 - Configurar o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-32---configure-the-sap-audit-log-viewer-service)
+     - [Exercício 3.3 - Verifique os logs de auditoria e baixe as entradas do log de auditoria por meio do serviço SAP Audit Log Viewer](exercises/ex3/README.md#exercise-32---check-the-audit-logs-and-download-audit -log-entries-via-the-sap-audit-log-viewer-service)
 
 
 
-**IMPORTANT**
+**IMPORTANTE**
 
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+Seu repositório deve conter a pasta .reuse e LICENSES e a seção Licença abaixo. NÃO REMOVA a seção ou pastas/arquivos. Além disso, remova todos os ativos de modelo não utilizados (imagens, pastas, etc.) da pasta de exercícios.
 
-## Contributing
-Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
+## Contribuindo
+Por favor, leia [CONTRIBUTING.md](./CONTRIBUTING.md) para entender as diretrizes de contribuição.
 
-## Code of Conduct
-Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
+## Código de Conduta
+Leia o [Código de conduta de código aberto da SAP](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
 
-## How to obtain support
+## Como obter suporte
 
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+O suporte para o conteúdo deste repositório está disponível durante a sessão online para a qual este conteúdo foi projetado. Caso contrário, você pode solicitar suporte através da aba [Issues](../../issues).
 
-## License
-Copyright (c) 2023 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+## Licença
+Copyright (c) 2024 SAP SE e LAB2DEV. Todos os direitos reservados. Este projeto está licenciado sob a Licença de Software Apache, versão 2.0, exceto quando indicado de outra forma no arquivo [LICENSE](LICENSES/Apache-2.0.txt).
