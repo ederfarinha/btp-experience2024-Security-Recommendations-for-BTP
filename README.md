@@ -31,7 +31,7 @@ Agora você está pronto para iniciar os exercícios.
 
 - [Introdução](exercises/ex0/)
 - [Exercício 1 - Habilitar autenticação multifator para aplicativos](exercises/ex1/)
-     - [Exercício 1.1 - Configure SAP Build Apps e insira o aplicativo com o usuário do seu provedor de identidade de avaliação](exercises/ex1#exercise-11---Setup-SAP-Build-Apps-and-enter-the-application-with-your -usuário-provedor-de-identidade de teste)
+     - [Exercício 1.1 - Configure SAP Build Apps e insira o aplicativo com o usuário do seu provedor de identidade de avaliação](exercises/ex1#exerc%C3%ADcio-11---configure-sap-build-apps-e-insira-o-aplicativo-com-o-usu%C3%A1rio-do-seu-provedor-de-identidade-de-teste)
      - [Exercício 1.2 - Configurar autenticação multifator para acessar aplicativos SAP Build](exercises/ex1#exercise-12---Configure-Multi-Factor-Authentication-to-access-SAP-Build-Apps)
      - [Exercício 1.3 - Habilitar MFA para seu usuário](exercises/ex1#exerc%C3%ADcio-13---habilite-mfa-para-seu-usu%C3%A1rio)
     
