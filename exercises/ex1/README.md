@@ -131,7 +131,7 @@ Assim que a configuração for concluída, o sistema solicitará que o usuário 
 
 2. O perfil do usuário mostra os métodos de autenticação configurados para um usuário. Você pode acessá-lo através do seguinte link no ambiente de teste:
 
-**https://"trialtenant-ID".trial-accounts.ondemand.com/ui/protected/profilemanagement**
+**https://"yourtrialtenant-ID".trial-accounts.ondemand.com/ui/protected/profilemanagement**
 
 Adicione **ui/protected/profilemanagement** em seu navegador após **https://"trialtenant-ID".trial-accounts.ondemand.com/**
 
