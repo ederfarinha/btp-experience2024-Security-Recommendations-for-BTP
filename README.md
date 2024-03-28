@@ -4,15 +4,15 @@
 
 ## Descrição
 
-Este repositório contém o material para a sessão SAP BTP Experience Brazil 2024 chamada XP264 - Get Hands-On Security Recommendations for Your SAP BTP Environment.
+Este repositório contém o material para a sessão do SAP BTP Experience Brazil 2024 chamada XP264 - Get Hands-On Security Recommendations for Your SAP BTP Environment.
 
 ## Visão geral
 
-Nesta sessão os participantes aprenderão sobre as recomendações de segurança para serviços BTP e como implementá-las. As [Recomendações de segurança SAP BTP](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations) estão disponíveis no SAP Help Portal nas seções para a Plataforma de Tecnologia de Negócios SAP. É uma lista com recomendações SAP para a configuração de serviços SAP BTP para ajudar os clientes a atingir suas metas de conformidade e proteger seus negócios.
+Nesta sessão os participantes aprenderão sobre as recomendações de segurança para serviços BTP e como implementá-las. As [Recomendações de segurança SAP BTP](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations) estão disponíveis no SAP Help Portal nas seções para a SAP Business Technology Platform. É uma lista com recomendações SAP para as configurações de serviços SAP BTP para ajudar os clientes a atingir suas metas de conformidade e proteger seus negócios.
 
 ## Requisitos
 
-Os requisitos para seguir os exercícios neste repositório são contas de teste ativas para SAP BTP e para os serviços SAP Cloud Identity.
+Os requisitos para seguir os exercícios neste repositório são contas de teste ativas para o SAP BTP e para o serviço SAP Cloud Identity.
 
 **Primeiro você precisa obter sua conta de teste SAP BTP. Siga as instruções:**
 [Obtenha uma conta gratuita na avaliação do SAP BTP](https://developers.sap.com/tutorials/hcp-create-trial-account.html)
@@ -29,18 +29,18 @@ Agora você está pronto para iniciar os exercícios.
 
 ## Exercícios
 
-- [Introdução](exercícios/ex0/)
-- [Exercício 1 - Habilitar autenticação multifator para aplicativos](exercícios/ex1/)
+- [Introdução](exercises/ex0/)
+- [Exercício 1 - Habilitar autenticação multifator para aplicativos](exercises/ex1/)
      - [Exercício 1.1 - Configure SAP Build Apps e insira o aplicativo com o usuário do seu provedor de identidade de avaliação](exercícios/ex1#exercise-11---Setup-SAP-Build-Apps-and-enter-the-application-with-your -usuário-provedor-de-identidade de teste)
      - [Exercício 1.2 - Configurar autenticação multifator para acessar aplicativos SAP Build](exercises/ex1#exercise-12---Configure-Multi-Factor-Authentication-to-access-SAP-Build-Apps)
      - [Exercício 1.3 - Habilitar MFA para seu usuário](exercícios/ex1#exercise-13---Habilitar MFA para seu usuário)
     
-- [Exercício 2 - Recomendações de segurança em relação ao acesso e autenticação de usuários](exercícios/ex2/)
-     - [Exercício 2.1 - Gerenciar administradores obsoletos](exercícios/ex2#exercise-21---Gerenciar administradores obsoletos)
-     - [Exercício 2.2 - Definindo uma política de senha personalizada](exercícios/ex2#exercise-22---Defining-a-custom-password-policy)
-     - [Exercício 2.3 - Manter o acesso público aos aplicativos por auto-registro desabilitado](exercícios/ex2#exercise-23---Keep-public-access-to-applications-by-self---registration-disabled)
-     - [Exercício 2.4 - Manter o Social Sign-On desativado](exercícios/ex2#exercise-24---Keep-Social-Sign---On-disabled)
-- [Exercício 3 - Recomendações de segurança em relação ao log de auditoria](exercícios/ex3/)
+- [Exercício 2 - Recomendações de segurança em relação ao acesso e autenticação de usuários](exercises/ex2/)
+     - [Exercício 2.1 - Gerenciar administradores obsoletos](exercises/ex2#exercise-21---Gerenciar administradores obsoletos)
+     - [Exercício 2.2 - Definindo uma política de senha personalizada](exercises/ex2#exercise-22---Defining-a-custom-password-policy)
+     - [Exercício 2.3 - Manter o acesso público aos aplicativos por auto-registro desabilitado](exercises/ex2#exercise-23---Keep-public-access-to-applications-by-self---registration-disabled)
+     - [Exercício 2.4 - Manter o Social Sign-On desativado](exercises/ex2#exercise-24---Keep-Social-Sign---On-disabled)
+- [Exercício 3 - Recomendações de segurança em relação ao log de auditoria](exercises/ex3/)
      - [Exercício 3.1 - Assine o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-31---Subscribe-to-the-SAP-Audit-Log-Viewer-service)
      - [Exercício 3.2 - Configurar o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-32---configure-the-sap-audit-log-viewer-service)
      - [Exercício 3.3 - Verifique os logs de auditoria e baixe as entradas do log de auditoria por meio do serviço SAP Audit Log Viewer](exercises/ex3/README.md#exercise-32---check-the-audit-logs-and-download-audit -log-entries-via-the-sap-audit-log-viewer-service)
