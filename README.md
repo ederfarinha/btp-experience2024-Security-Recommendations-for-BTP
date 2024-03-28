@@ -32,18 +32,18 @@ Agora você está pronto para iniciar os exercícios.
 - [Introdução](exercises/ex0/)
 - [Exercício 1 - Habilitar autenticação multifator para aplicativos](exercises/ex1/)
      - [Exercício 1.1 - Configure SAP Build Apps e insira o aplicativo com o usuário do seu provedor de identidade de avaliação](exercises/ex1#exerc%C3%ADcio-11---configure-sap-build-apps-e-insira-o-aplicativo-com-o-usu%C3%A1rio-do-seu-provedor-de-identidade-de-teste)
-     - [Exercício 1.2 - Configurar autenticação multifator para acessar aplicativos SAP Build](exercises/ex1#exercise-12---Configure-Multi-Factor-Authentication-to-access-SAP-Build-Apps)
+     - [Exercício 1.2 - Configurar autenticação multifator para acessar aplicativos SAP Build](exercises/ex1#exerc%C3%ADcio-12---configurar-autentica%C3%A7%C3%A3o-multifator-para-acessar-aplicativos-sap-build)
      - [Exercício 1.3 - Habilitar MFA para seu usuário](exercises/ex1#exerc%C3%ADcio-13---habilite-mfa-para-seu-usu%C3%A1rio)
     
 - [Exercício 2 - Recomendações de segurança em relação ao acesso e autenticação de usuários](exercises/ex2/)
-     - [Exercício 2.1 - Gerenciar administradores obsoletos](exercises/ex2#exercise-21---Gerenciar administradores obsoletos)
-     - [Exercício 2.2 - Definindo uma política de senha personalizada](exercises/ex2#exercise-22---Defining-a-custom-password-policy)
-     - [Exercício 2.3 - Manter o acesso público aos aplicativos por auto-registro desabilitado](exercises/ex2#exercise-23---Keep-public-access-to-applications-by-self---registration-disabled)
-     - [Exercício 2.4 - Manter o Social Sign-On desativado](exercises/ex2#exercise-24---Keep-Social-Sign---On-disabled)
+     - [Exercício 2.1 - Gerenciar administradores obsoletos](exercises/ex2#exerc%C3%ADcio-21-gerenciar-administradores-obsoletos)
+     - [Exercício 2.2 - Definindo uma política de senha personalizada](exercises/ex2#exerc%C3%ADcio-22-definindo-uma-pol%C3%ADtica-de-senha-personalizada)
+     - [Exercício 2.3 - Manter o acesso público aos aplicativos por auto-registro desabilitado](exercises/ex2#exerc%C3%ADcio-23-manter-o-acesso-p%C3%BAblico-aos-aplicativos-por-meio-de-autorregistro-desabilitado)
+     - [Exercício 2.4 - Manter o Social Sign-On desativado](exercises/ex2#exerc%C3%ADcio-24-manter-o-social-sign-on-desativado)
 - [Exercício 3 - Recomendações de segurança em relação ao log de auditoria](exercises/ex3/)
-     - [Exercício 3.1 - Assine o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-31---Subscribe-to-the-SAP-Audit-Log-Viewer-service)
-     - [Exercício 3.2 - Configurar o serviço SAP Audit Log Viewer](exercises/ex3/README.md#Exercise-32---configure-the-sap-audit-log-viewer-service)
-     - [Exercício 3.3 - Verifique os logs de auditoria e baixe as entradas do log de auditoria por meio do serviço SAP Audit Log Viewer](exercises/ex3/README.md#exercise-32---check-the-audit-logs-and-download-audit -log-entries-via-the-sap-audit-log-viewer-service)
+     - [Exercício 3.1 - Assine o serviço SAP Audit Log Viewer](exercises/ex3/README.md#exerc%C3%ADcio-31-assine-o-servi%C3%A7o-sap-audit-log-viewer)
+     - [Exercício 3.2 - Configurar o serviço SAP Audit Log Viewer](exercises/ex3/README.md#exerc%C3%ADcio-32-configurar-o-servi%C3%A7o-sap-audit-log-viewer)
+     - [Exercício 3.3 - Verifique os logs de auditoria e baixe as entradas do log de auditoria por meio do serviço SAP Audit Log Viewer](exercises/ex3/README.md#exerc%C3%ADcio-33-verifique-os-logs-de-auditoria-e-baixe-as-entradas-do-log-de-auditoria-por-meio-do-servi%C3%A7o-sap-audit-log-viewer)
 
 
 
